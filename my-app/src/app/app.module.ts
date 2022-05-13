@@ -6,12 +6,20 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ChampsComponent } from './champs/champs.component';
 import { TableComponent } from './table/table.component';
+import { NameComponent } from './name/name.component';
+import { IdentityComponent } from './identity/identity.component';
+import { DameComponent } from './dame/dame.component';
+import { TableAvatarComponent } from './table/table-avatar/table-avatar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ChampsComponent,
-    TableComponent
+    TableComponent,
+    NameComponent,
+    IdentityComponent,
+    DameComponent,
+    TableAvatarComponent
   ],
   imports: [
     BrowserModule,

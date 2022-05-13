@@ -9,27 +9,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   // định nghĩa các biến
   // các biến nhận giá trị bên file html
-  title = 'my-app';
-  name = 'Hoangvm';
-  adress = 'Hòa bình'
-  students = [
-    {
-      name: 'Hoangvm',
-      id:'PH13792',
-      status: 0
-    },
-    {
-      name: 'Hoangvm2',
-      id:'PH13793',
-      status: 1
-    },
-    {
-      name: 'Hoang',
-      id:'PH137111',
-      status: 1
-    }
-  ]
-
   champs = [
     {
       name: 'zed',
@@ -41,7 +20,7 @@ export class AppComponent {
     },
     {
       name: 'jax',
-      dame: 50000,
+      dame: 30,
       defend: 40,
       speed: 1000,
       price:8000,
@@ -55,6 +34,8 @@ export class AppComponent {
       price:8000,
       avata: "https://cdngarenanow-a.akamaihd.net/webmain/static/pss/lol/items_splash/yasuo_17.jpg"
     }
-  ]
+  ];
+  studenName = 'Hoangvm';
+  studentId = 'PH13792'
   
 }
