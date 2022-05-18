@@ -1,10 +1,55 @@
+<div>
 
- <div>
-  <app-table [champions] ="champs"></app-table>
-  <div>
-      Tên SV: <app-name [name]="studenName"></app-name>
-  </div>
-  <div>
-      Mã SV: <app-identity [id]="studentId" ></app-identity>
-  </div>
- </div>
+    <div>
+        Tên SV: <app-name [name]="studenName"></app-name>
+    </div>
+    <div>
+        Mã SV: <app-identity [id]="studentId"></app-identity>
+    </div>
+    <div>
+        <h3>Sự Kiện</h3>
+        <button (click)="onClickBtn()" class="btn btn-primary">
+            {{showStatus ? 'Ẩn' : 'Hiện'}} bảng dữ liệu
+        </button>
+    </div>
+    <div>
+        <label for="input">sự kiện cho input</label>
+        <input type="text" id="input" (input)="onInput($event, 'input Name')">
+    </div>
+</div>
+<!-- cách 1: sử dụng css -->
+<!-- <app-table [champions] ="champs" class="{{showStatus ? 'db' : 'dn'}}"></app-table> -->
+<!-- cách 2:  sử dụng bằng *ngIf khi showStatus true thì câu lệnh mới chạy -->
+<app-table [champions]="champs" *ngIf="showStatus"></app-table>
+
+<!-- Champ -->
+
+<div >
+    <div>
+        <label for="input">Name</label> 
+        <input type="text" id="input" (input)="OnInput($event, 'name')" [value]="inputValue.name"><br>
+    </div>
+    <div>
+        <label for="input">Avatar</label>
+        <input type="text" id="input" (input)="OnInput($event, 'avata')" [value]="inputValue.avata"> <br>
+    </div>
+    <div>
+        <label for="input">Speed</label>
+        <input type="text" id="input" (input)="OnInput($event, 'speed')" [value]="inputValue.speed"> <br>
+    </div>
+    <div>
+        <label for="input">Price</label>
+        <input type="text" id="input" (input)="OnInput($event, 'price')" [value]="inputValue.price"> <br>
+    </div>
+    <div>
+        <label for="input">Dame</label>
+        <input type="text" id="input" (input)="OnInput($event, 'dame')" [value]="inputValue.dame"> <br>
+    </div>
+    <div>
+        <label for="input">Defend</label>
+        <input type="text" id="input" (input)="OnInput($event, 'defend')" [value]="inputValue.defend"> <br>
+    </div>
+    <div>
+        <button (click)="onClick()" class="btn btn-success ">Submit</button>
+    </div>
+</div>
