@@ -23,7 +23,33 @@
 <app-table [champions]="champs" *ngIf="showStatus"></app-table>
 
 <!-- Champ -->
-
+<div>
+    <label for="input">Name</label> 
+    <input type="text" id="input" (input)="OnInput($event, 'name')" [value]="inputValue.name"><br>
+</div>
+<div>
+    <label for="input">Avatar</label>
+    <input type="text" id="input" (input)="OnInput($event, 'avata')" [value]="inputValue.avata"> <br>
+</div>
+<div>
+    <label for="input">Speed</label>
+    <input type="text" id="input" (input)="OnInput($event, 'speed')" [value]="inputValue.speed"> <br>
+</div>
+<div>
+    <label for="input">Price</label>
+    <input type="text" id="input" (input)="OnInput($event, 'price')" [value]="inputValue.price"> <br>
+</div>
+<div>
+    <label for="input">Dame</label>
+    <input type="text" id="input" (input)="OnInput($event, 'dame')" [value]="inputValue.dame"> <br>
+</div>
+<div>
+    <label for="input">Defend</label>
+    <input type="text" id="input" (input)="OnInput($event, 'defend')" [value]="inputValue.defend"> <br>
+</div>
+<div>
+    <button (click)="onClick()" class="btn btn-success ">Submit</button>
+</div>
 <div >
     <div>
         <p>
@@ -31,31 +57,4 @@
         </p>
         <app-form></app-form>
     </div>
-    <div>
-        <label for="input">Name</label> 
-        <input type="text" id="input" (input)="OnInput($event, 'name')" [value]="inputValue.name"><br>
-    </div>
-    <div>
-        <label for="input">Avatar</label>
-        <input type="text" id="input" (input)="OnInput($event, 'avata')" [value]="inputValue.avata"> <br>
-    </div>
-    <div>
-        <label for="input">Speed</label>
-        <input type="text" id="input" (input)="OnInput($event, 'speed')" [value]="inputValue.speed"> <br>
-    </div>
-    <div>
-        <label for="input">Price</label>
-        <input type="text" id="input" (input)="OnInput($event, 'price')" [value]="inputValue.price"> <br>
-    </div>
-    <div>
-        <label for="input">Dame</label>
-        <input type="text" id="input" (input)="OnInput($event, 'dame')" [value]="inputValue.dame"> <br>
-    </div>
-    <div>
-        <label for="input">Defend</label>
-        <input type="text" id="input" (input)="OnInput($event, 'defend')" [value]="inputValue.defend"> <br>
-    </div>
-    <div>
-        <button (click)="onClick()" class="btn btn-success ">Submit</button>
-    </div>
-</div>
+  
