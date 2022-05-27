@@ -1,3 +1,15 @@
+
+<h1>Hello</h1>
+<nav>
+    <ul>
+        <li><a routerLink="/product-">Products</a></li>
+        <li><a routerLink="/champ">Champ</a></li>
+        <li><a routerLink="/product-detail">Product-detail</a></li>
+        <li><a routerLink="/about">about</a></li>
+    </ul>
+</nav>
+<router-outlet></router-outlet>
+<!-- 
 <div>
 
     <div>
@@ -16,14 +28,14 @@
         <label for="input">sự kiện cho input</label>
         <input type="text" id="input" (input)="onInput($event, 'input Name')">
     </div>
-</div>
+</div> -->
 <!-- cách 1: sử dụng css -->
 <!-- <app-table [champions] ="champs" class="{{showStatus ? 'db' : 'dn'}}"></app-table> -->
 <!-- cách 2:  sử dụng bằng *ngIf khi showStatus true thì câu lệnh mới chạy -->
-<app-table [champions]="champs" *ngIf="showStatus"></app-table>
+<!-- <app-table [champions]="champs" *ngIf="showStatus"></app-table> -->
 
 <!-- Champ -->
-<div>
+<!-- <div>
     <label for="input">Name</label> 
     <input type="text" id="input" (input)="OnInput($event, 'name')" [value]="inputValue.name"><br>
 </div>
@@ -57,4 +69,4 @@
         </p>
         <app-form></app-form>
     </div>
-  
+   -->
