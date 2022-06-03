@@ -1,0 +1,17 @@
+<div>
+    <a routerLink="/admin/products">
+        <button class="btn btn-primary">Quay lại</button>
+
+    </a>
+</div>
+
+
+<form [formGroup]="productForm" (ngSubmit)="onSubmit">
+    <div class="form-group">
+        <label for="">Product Name</label>
+        <input type="text" class="form-control" formControlName="name">
+    </div>
+    <div>
+        <button class="btn btn-success">Submit</button>
+    </div>
+</form>
