@@ -32,6 +32,7 @@ import { AdminProductListComponent } from './pages/admin/admin-product/admin-pro
 
 // đây là module cung cấp các phương thức để component sử dụng gọi api
 import { HttpClientModule} from '@angular/common/http';
+import { LogninComponent } from './pages/auth/lognin/lognin.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,7 @@ import { HttpClientModule} from '@angular/common/http';
     UserComponent,
     ListComponent, 
     AdminProductListComponent,
-    UserFormComponent, ProductClientComponent, AboutClientComponent, ProductDetailClientComponent, LayoutsComponent, ClientLayoutComponent, AdminLayoutComponent, HomeClientComponent, AdminProductDetailComponent, AdminProductFormComponent
+    UserFormComponent, ProductClientComponent, AboutClientComponent, ProductDetailClientComponent, LayoutsComponent, ClientLayoutComponent, AdminLayoutComponent, HomeClientComponent, AdminProductDetailComponent, AdminProductFormComponent, LogninComponent
   ],
   imports: [
     BrowserModule,

@@ -6,12 +6,14 @@
 </div>
 
 
-<form [formGroup]="productForm" (ngSubmit)="onSubmit">
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
         <label for="">Product Name</label>
         <input type="text" class="form-control" formControlName="name">
+        <!-- <span *ngIf="(productForm.get('name')?.dirty || productForm.get('name')?.touched) && productForm.get('name')?.errors?.['required']">Tên SP bắt buộc nhập</span> -->
+        <app-show-validate [field]="productForm.get('name')" key =" tên sản phẩm"></app-show-validate>
     </div>
     <div>
-        <button class="btn btn-success">Submit</button>
+        <button [disabled]="!productForm.valid" class="btn btn-success">Submit</button>
     </div>
 </form>

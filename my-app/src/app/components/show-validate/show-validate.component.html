@@ -2,3 +2,9 @@
 <span *ngIf="(field.dirty || field.touched) && field.errors?.['min']" class="text-danger">{{key}} tối thiểu 1</span>
 <span *ngIf="(field.dirty || field.touched) && field.errors?.['max']" class="text-danger">{{key}} tối thiểu 1000000</span>
 <span *ngIf="(field.dirty || field.touched) && field.errors?.['minlength']" class="text-danger"> {{key}} Tối thiểu {{field.errors?.['minlength'].requiredLength}} ký tự </span>
+<span *ngIf="(field.dirty || field.touched) && field.errors?.['maxlength']" class="text-danger"> {{key}} Tối đa {{field.errors?.['maxlength'].requiredLength}} ký tự </span>
+
+
+<!--  -->
+
+<span *ngIf="(field.dirty || field.touched) && field.errors?.['hasProductError']" class="text-danger"> {{key}} phải có 'product' </span>

@@ -5,3 +5,7 @@ export type Product = {
     image: string,
     desc: string
 };
+
+export type ProductCreate = {
+    name: string,
+}
