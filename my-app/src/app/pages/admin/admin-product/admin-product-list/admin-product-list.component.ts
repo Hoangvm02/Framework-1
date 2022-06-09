@@ -21,7 +21,7 @@ export class AdminProductListComponent implements OnInit {
       this.products = data;
     })
   }
-  onDelete(_id:number){
+  onDelete(_id:string){
     const confirm = window.confirm("Bạn chắc chắn muốn xóa ?")
     if (confirm && _id) {
       this.productService.deleteProduct(_id).subscribe((data) =>{

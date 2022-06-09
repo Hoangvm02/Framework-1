@@ -1,17 +1,14 @@
 export type Product = {
-    _id: string,
+    _id: number,
     name: string, 
     price: number, 
+    price_sale: number,
     image: string,
-    desc: string
+    desc: string,
+    status: string,
+    category_id: number
 };
 
 export type ProductCreate = {
     name: string,
 }
-
-export type ProductCart = {
-    _id: string,
-    name: string,
-    value: number
-  };

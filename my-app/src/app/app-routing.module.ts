@@ -10,6 +10,7 @@ import { AdminProductDetailComponent } from './pages/admin/admin-product/admin-p
 import { AdminProductFormComponent } from './pages/admin/admin-product/admin-product-form/admin-product-form.component';
 import { AdminProductListComponent } from './pages/admin/admin-product/admin-product-list/admin-product-list.component';
 import { LogninComponent } from './pages/auth/lognin/lognin.component';
+import { BookClientComponent } from './pages/book-client/book-client.component';
 import { ProductClientComponent } from './product-client/product-client.component';
 import { ProductDetailClientComponent } from './product-detail-client/product-detail-client.component';
 import { UserFormComponent } from './user/form/form.component';
@@ -29,8 +30,16 @@ const routes: Routes = [
         component: ProductClientComponent
       },
       {
+        path: 'products/:id',
+        component: ProductDetailClientComponent
+      },
+      {
         path:'about',
         component: AboutClientComponent
+      },
+      {
+        path:'books',
+        component: BookClientComponent
       }
       
     ]
