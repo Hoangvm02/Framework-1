@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutClientComponent } from './about-client/about-client.component';
 import { ChampsComponent } from './champs/champs.component';
+import { CartComponent } from './components/cart/cart.component';
 import { CanAccessAdminGuard } from './guards/can-access-admin.guard';
 import { HomeClientComponent } from './home-client/home-client.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
@@ -40,6 +41,10 @@ const routes: Routes = [
       {
         path:'books',
         component: BookClientComponent
+      },
+      {
+        path:'cart',
+        component: CartComponent
       }
       
     ]

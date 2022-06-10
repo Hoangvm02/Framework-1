@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./client-layout.component.css']
 })
 export class ClientLayoutComponent implements OnInit {
-
+  logged = JSON.parse(localStorage.getItem('loggedInUser') as string);
   constructor() { }
 
   ngOnInit(): void {
+    
   }
-
+  logout(){
+    localStorage.removeItem('loggedInUser');
+    location.reload()
+  }
 }
