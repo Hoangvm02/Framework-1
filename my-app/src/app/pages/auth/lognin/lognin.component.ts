@@ -10,7 +10,7 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class LogninComponent implements OnInit {
 
-    loginForm: FormGroup
+  loginForm: FormGroup
   constructor(
     private authService: AuthService,
     private router: Router
@@ -25,7 +25,7 @@ export class LogninComponent implements OnInit {
   }
   onSubmit(){
     //1: Nhận dữ liệu từ form và call API login
-    // console.log("huy");
+    // console.log("hoang");
     
     this.authService.login(this.loginForm.value).subscribe(data => {
       // 2: lưu thông tin user vào loacalSrage: setItem(tên key luw váo ls, dữ liệu string)

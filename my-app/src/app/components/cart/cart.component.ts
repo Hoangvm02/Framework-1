@@ -10,6 +10,7 @@ import { ProductCart } from 'src/app/types/Product';
 export class CartComponent implements OnInit {
   cartItems: ProductCart[];
   cartItemValues: number = 0;
+  cartTotal: number = 0
   constructor(private lsService: LocalStorageService) {
     this.cartItems = [];
   }
@@ -21,6 +22,12 @@ export class CartComponent implements OnInit {
       this.onSetCart();
     })
   }
+  onRemove(id:string){
+    this.lsService.removeItem(id)
+    this.onSetCart()
+    this.cartItems = this.lsService.getItem();
+    this.cartItemValues = this.cartItems.reduce((a, b) => a + b.value, 0);
+  }
   onSetCart() {
     this.cartItems = this.lsService.getItem();
     // this.cartItemValues = 0;
@@ -28,6 +35,7 @@ export class CartComponent implements OnInit {
     //   this.cartItemValues += item.value;
     // })
     this.cartItemValues = this.cartItems.reduce((a, b) => a + b.value, 0);
+
   }
 
 }

@@ -33,15 +33,22 @@
                                     class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                     Name
                                 </th>
-                                
+                                <th scope="col"
+                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                Tác giả
+                            </th>
                                 <th scope="col"
                                     class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                     PRICE
                                 </th>
                                 <th scope="col"
-                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    Chi Tiết
-                                </th>
+                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                SALE
+                            </th>
+                        <th scope="col"
+                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            Catgory
+                        </th>
                                 <th scope="col"
                                     class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                     SỬA
@@ -74,11 +81,25 @@
                                 </td>
                                 <td class="px-6 py-4 mx-auto">
                                     <p class="max-w-full px-2 text-xs font-semibold">
+                                        {{product.author}}
+                                    </p>
+                                </td>
+                                <td class="px-6 py-4 mx-auto">
+                                    <p class="max-w-full px-2 text-xs font-semibold">
                                         {{product.price}}
                                     </p>
                                 </td>
-                                <td> <a routerLink="/admin/products/{{product._id}}"><button class="btn btn-info">Detail</button></a></td>
-                                <td> <a routerLink="/admin/products/edit/{{product._id}}"><button class="btn btn-info">Edit</button></a></td>
+                                <td class="px-6 py-4 mx-auto">
+                                    <p class="max-w-full px-2 text-xs font-semibold">
+                                        {{product.sale_price}}
+                                    </p>
+                                </td>
+                                <td class="px-6 py-4 mx-auto" >
+                                    <p class="max-w-full px-2 text-xs font-semibold" *ngFor="let cate of category">
+                                        <span *ngIf="cate._id == product.category">{{cate.name}}</span>
+                                    </p>
+                                </td>
+                                <td> <a routerLink="/admin/products/edit/{{product._id}}"><button class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Edit</button></a></td>
                                 <td>
                                     <button type="button" (click)="onDelete(product._id)" class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">Delete</button>
                                 </td>

@@ -1,0 +1,23 @@
+<div>
+    <a routerLink="/admin/products">
+        <button class="btn btn-primary">Quay lại</button>
+
+    </a>
+</div>
+
+<form [formGroup]="categoryForm" (ngSubmit)="onSubmit()" style="max-width: 600px">
+    
+    <div class="form-group">
+        <label class="control-label" for="">Tên sản phẩm</label>
+        <div class="">
+            <input id="name" placeholder="Tên sản phẩm" class="form-control input-md" formControlName="name"
+                required="" type="text">
+        </div>
+        <app-show-validate [field]="categoryForm.get('name')" key="name"></app-show-validate>
+    </div>
+    
+    <div>
+        <button class="btn btn-success">Submit</button>
+    </div>
+    
+</form>

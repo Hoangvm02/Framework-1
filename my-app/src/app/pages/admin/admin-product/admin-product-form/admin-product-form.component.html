@@ -5,15 +5,62 @@
     </a>
 </div>
 
-
-<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()" style="max-width: 600px">
     <div class="form-group">
-        <label for="">Product Name</label>
-        <input type="text" class="form-control" formControlName="name">
-        <!-- <span *ngIf="(productForm.get('name')?.dirty || productForm.get('name')?.touched) && productForm.get('name')?.errors?.['required']">Tên SP bắt buộc nhập</span> -->
-        <app-show-validate [field]="productForm.get('name')" key =" tên sản phẩm"></app-show-validate>
+        <label class="control-label" for="">DANH MỤC SẢN PHẨM</label>
+        <div class="">
+            <select id="" name="Danh mục" class="form-control" formControlName="category">
+                <option *ngFor="let cate of category" value="{{cate._id}}">{{cate.name}}</option>
+            </select>
+        </div>
     </div>
+    <div class="form-group">
+        <label class="control-label" for="">Tên sản phẩm</label>
+        <div class="">
+            <input id="product_name" placeholder="Tên sản phẩm" class="form-control input-md" formControlName="name"
+                required="" type="text">
+        </div>
+        <app-show-validate [field]="productForm.get('name')" key="name"></app-show-validate>
+    </div>
+    <div class="form-group">
+        <label class="control-label" for="author">Tác giả</label>
+        <div class="">
+            <input id="author" name="author" placeholder="Tác giả" class="form-control input-md" required="" formControlName="author" type="text">
+        </div>
+        <app-show-validate [field]="productForm.get('author')" key="author"></app-show-validate>
+    </div>
+    
+    <div class="form-group">
+        <label class="control-label" for="price">Giá </label>
+        <div class="">
+            <input id="price" placeholder="Giá" class="form-control input-md" formControlName="price"
+                required="" type="number">
+        </div>
+        <app-show-validate [field]="productForm.get('price')" key="giá"></app-show-validate>
+    </div>
+    <div class="form-group">
+        <label class="control-label" for="sale_price">Giảm giá </label>
+        <div class="">
+            <input id="sale_price" placeholder="" class="form-control input-md" formControlName="sale_price"
+                required="" type="number">
+        </div>
+        <app-show-validate [field]="productForm.get('sale_price')" key="sale_price"></app-show-validate>
+    </div>
+    <div class="form-group">
+        <label class="control-label" for="product_description">MÔ TẢ</label>
+        <div class="">                     
+          <textarea class="form-control" id="product_description"  formControlName="desc"></textarea>
+        </div>
+        <app-show-validate [field]="productForm.get('desc')" key="desc"></app-show-validate>
+      </div>
+      <!-- <div class="form-group">
+        <label class="control-label">Ảnh</label>
+        <div>
+            <input type="text" class="form-group"  formControlName="image" >
+        </div>
+    </div>  -->
     <div>
-        <button [disabled]="!productForm.valid" class="btn btn-success">Submit</button>
+        <button class="btn btn-success">Submit</button>
     </div>
+    
 </form>

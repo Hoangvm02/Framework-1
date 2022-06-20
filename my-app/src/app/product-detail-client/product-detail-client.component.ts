@@ -30,7 +30,12 @@ export class ProductDetailClientComponent implements OnInit {
       name: '',
       price: 0,
       image: '',
-      desc: ''
+      desc: '',
+      value: 0,
+      sale_price: 0,
+      author: '',
+      status: 0,
+      category:""
     };
 
     this.cartValue = 1;

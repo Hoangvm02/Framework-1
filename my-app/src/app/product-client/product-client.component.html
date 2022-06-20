@@ -9,9 +9,8 @@
                             <p class="text-xl lg:leading-6 leading-5 font-medium">Danh mục</p>
                         </div>
                         <div class="mt-8 flex-wrap">
-                        <div
-                        class="1 space-x-2 mb-2 md:justify-center md:items-center items-center justify-end" >
-                        <a href="/category/${cate.id}" class="text-base leading-4 dark:text-gray-300 text-gray-600 hover:text-gray-500 font-normal">Quần </a>
+                        <div *ngFor="let cate of category"  class=" 1 space-x-2 mb-2 md:justify-center md:items-center items-center justify-end" >
+                        <a routerLink="" class="text-base leading-4 dark:text-gray-300 text-gray-600 hover:text-gray-500 font-normal">{{cate.name}}</a>
                         </div>
                         </div>
                     </div>
@@ -28,7 +27,7 @@
                             <a routerLink="/products/{{product._id}}">
                                 <img alt="person capturing an image"
                                 src={{product.image}} tabindex="0"
-                                class="focus:outline-none w-full h-44" />
+                                class="focus:outline-none w-full h-60" />
                               </a>
                             
                         </div>
@@ -57,8 +56,7 @@
                                     </div>
                                 </div>
                                 <div class="flex items-center justify-between py-4">
-                                    <h2 tabindex="0" class="focus:outline-none text-indigo-700 text-xs font-semibold">Bay Area,
-                                        San Francisco</h2>
+                                    <h2 tabindex="0" class="focus:outline-none text-indigo-700 text-xs font-semibold">{{product.status}}</h2>
                                     <h3 tabindex="0" class="focus:outline-none text-indigo-700 text-xl font-semibold">{{product.price}}</h3>
                                 </div>
                             </div>
