@@ -65,7 +65,6 @@ const routes: Routes = [
     path: 'admin',
     component: AdminLayoutComponent,
     canActivate: [CanAccessAdminGuard],
-    // vì không có màn dasboard nên ta sẽ diều hướng ra phần users
     children: [
     {
       path: 'products',

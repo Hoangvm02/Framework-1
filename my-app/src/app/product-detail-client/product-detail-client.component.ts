@@ -59,6 +59,8 @@ export class ProductDetailClientComponent implements OnInit {
       ...this.product,
       value: +this.cartValue
     };
+
+
     // Nếu thực hiện như cũ, thì phía component cart sẽ không lắng nghe được
 
     // Thực hiện gọi lsService để component cart có thể lắng nghe thay đổi

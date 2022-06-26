@@ -25,8 +25,7 @@ export class CartComponent implements OnInit {
   onRemove(id:string){
     this.lsService.removeItem(id)
     this.onSetCart()
-    this.cartItems = this.lsService.getItem();
-    this.cartItemValues = this.cartItems.reduce((a, b) => a + b.value, 0);
+ 
   }
   onSetCart() {
     this.cartItems = this.lsService.getItem();

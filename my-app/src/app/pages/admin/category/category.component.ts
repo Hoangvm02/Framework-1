@@ -25,6 +25,7 @@ export class CategoryComponent implements OnInit {
       this.category = data;
     })
   }
+  // get lại giữ liệu khi thay đổi
   onGetList() {
     this.categoryService.getCategory().subscribe((data) => {
       this.category = data;
@@ -34,6 +35,7 @@ export class CategoryComponent implements OnInit {
     const confirmDel = confirm("Bạn có chắc chắn muốn xóa không?")
     if (confirmDel && _id) {
       console.log(_id);
+      // gọi phương thức
       this.categoryService.delCategory(_id).subscribe((data) => {
         console.log(data);
         this.onGetList();

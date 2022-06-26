@@ -42,5 +42,6 @@ export class LocalStorageService {
     const cartItems = this.getItem();
     const afterCart = cartItems.filter((item: ProductCart) => item._id !== _id)
     localStorage.setItem('cart', JSON.stringify(afterCart));
+    this.storageSubject.next('');
   }
 }
